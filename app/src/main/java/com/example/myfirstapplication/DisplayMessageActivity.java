@@ -24,7 +24,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
     }
 
     public void clickRedButton(View view) {
-        Intent intent = new Intent(this, DisplayRedButtonActivity.class);
+        Intent intent = new Intent(this, ImageViewActivity.class);
         startActivity(intent);
     }
 }
