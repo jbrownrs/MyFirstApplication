@@ -30,10 +30,11 @@
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/red_cross_button"
         android:onClick="clickRedButton"
+        android:background="?attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_delete" />
+        app:srcCompat="@drawable/ic_highlight_off" />
 
     <TextView
         android:id="@+id/textView2"
