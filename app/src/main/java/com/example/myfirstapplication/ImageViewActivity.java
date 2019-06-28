@@ -1,12 +1,11 @@
 package com.example.myfirstapplication;
 
 import android.os.Bundle;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ImageViewActivity extends AppCompatActivity {
-    private ImageView imageView;
+//    private ImageView imageView;
 
 
     @Override

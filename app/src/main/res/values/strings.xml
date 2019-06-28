@@ -5,4 +5,6 @@
     <string name="shown_message">Very well, but dare you press the button below</string>
     <string name="red_cross_button">Button with red cross</string>
     <string name="user_text_output">TextView</string>
+    <string name="cow_image">Picture of a highland cow calf</string>
+    <string name="placeholder_add_item_text">Click to add an item</string>
 </resources>
