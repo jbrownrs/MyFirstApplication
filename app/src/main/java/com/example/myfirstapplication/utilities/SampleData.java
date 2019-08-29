@@ -1,6 +1,6 @@
 package com.example.myfirstapplication.utilities;
 
-import com.example.myfirstapplication.model.Item;
+import com.example.myfirstapplication.database.ItemEntity;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -21,11 +21,11 @@ public class SampleData {
         return cal.getTime();
     }
 
-    public static List<Item> getItems() {
-        List<Item> itemList = new ArrayList<>();
-        itemList.add(new Item(getDate(0), SAMPLE_TEXT_1));
-        itemList.add(new Item(getDate(-1), SAMPLE_TEXT_2));
-        itemList.add(new Item(getDate(-2), SAMPLE_TEXT_3));
+    public static List<ItemEntity> getItems() {
+        List<ItemEntity> itemList = new ArrayList<>();
+        itemList.add(new ItemEntity(getDate(0), SAMPLE_TEXT_1));
+        itemList.add(new ItemEntity(getDate(-1), SAMPLE_TEXT_2));
+        itemList.add(new ItemEntity(getDate(-2), SAMPLE_TEXT_3));
         return itemList;
     }
 }

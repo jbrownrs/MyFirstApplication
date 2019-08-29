@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myfirstapplication.model.Item;
+import com.example.myfirstapplication.database.ItemEntity;
 import com.example.myfirstapplication.ui.ItemRecyclerViewAdapter;
 import com.example.myfirstapplication.utilities.SampleData;
 
@@ -21,12 +21,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
+
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
-    //    private RecyclerView recyclerView;
-//    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager layoutManager;
-    private List<Item> itemList = new ArrayList<Item>();
+
+    private List<ItemEntity> itemList = new ArrayList<ItemEntity>();
     public static final String EXTRA_MESSAGE = "com.example.myfirstapplication.MESSAGE";
     // specify an adapter (see also next example)
     private ItemRecyclerViewAdapter mAdapter;
@@ -39,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         initRecyclerView();
         itemList.addAll(SampleData.getItems());
-        for (Item item : itemList) {
-            Log.i("ToDoList", item.toString());
+        for (ItemEntity itemEntity : itemList) {
+            Log.i("ToDoList", itemEntity.toString());
         }
     }
 
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         // in content do not change the layout size of the RecyclerView
         mRecyclerView.setHasFixedSize(true);
         // use a linear layout manager
-        layoutManager = new LinearLayoutManager(this);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
         //        recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 

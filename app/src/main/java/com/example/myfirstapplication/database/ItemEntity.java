@@ -1,24 +1,32 @@
-package com.example.myfirstapplication.model;
+package com.example.myfirstapplication.database;
+
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
 import java.util.Date;
 
-public class Item {
+@Entity(tableName = "items")
+public class ItemEntity {
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private Date date;
     private String text;
 
-    public Item(int id, Date date, String text) {
+    public ItemEntity(int id, Date date, String text) {
         this.id = id;
         this.date = date;
         this.text = text;
     }
 
-    public Item(Date date, String text) {
+    @Ignore
+    public ItemEntity(Date date, String text) {
         this.date = date;
         this.text = text;
     }
 
-    public Item() {
+    @Ignore
+    public ItemEntity() {
     }
 
     public int getId() {
@@ -47,7 +55,7 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
+        return "ItemEntity{" +
                 "id=" + id +
                 ", date=" + date +
                 ", text='" + text + '\'' +
