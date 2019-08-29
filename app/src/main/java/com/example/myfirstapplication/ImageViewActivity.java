@@ -2,9 +2,7 @@ package com.example.myfirstapplication;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class ImageViewActivity extends AppCompatActivity {
+public class ImageViewActivity extends MainActivity {
 //    private ImageView imageView;
 
 
