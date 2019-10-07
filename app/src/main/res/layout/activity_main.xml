@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/add_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:onClick="sendMessage"
+        android:text="@string/add_data"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText" />
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="0dp"
@@ -15,28 +27,16 @@
         android:hint="@string/enter_text_message"
         android:importantForAutofill="no"
         android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
-        app:layout_constraintEnd_toStartOf="@+id/send_button"
+        app:layout_constraintEnd_toStartOf="@+id/add_data"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor"
         tools:targetApi="o" />
 
-    <Button
-        android:id="@+id/send_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:onClick="sendMessage"
-        android:text="@string/button_send"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:clickable="true"
         android:focusable="true"

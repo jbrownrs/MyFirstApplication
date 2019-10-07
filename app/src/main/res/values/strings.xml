@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">My First Application</string>
     <string name="enter_text_message">Enter a message</string>
-    <string name="button_send">Send</string>
+    <string name="add_data">Send</string>
     <string name="before_button_message">Very well, but dare you press the button below</string>
     <string name="red_cross_button">Button with red cross</string>
     <string name="user_text_output">TextView</string>
